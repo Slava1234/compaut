@@ -1,6 +1,61 @@
+@font-face {
+    font-family: f1; /* ָלÿ רנטפעא */
+    src: url(3953.ttf); /* ֿףעü ך פאיכף סמ רנטפעמל */
+}
+@font-face {
+    font-family: f2; /* ָלÿ רנטפעא */
+    src: url(3966.ttf); /* ֿףעü ך פאיכף סמ רנטפעמל */
+}
+
 body {
     margin: 0;
     padding: 0;
+}
+.navbar {
+    background-color: white;
+    height: 78px;
+}
+.navbar ul li:first-child a {
+    color: #1aa58d;;
+}
+.navbar ul li a {
+    font-family: f1;
+    opacity: 0.6;
+}
+.navbar-brand {
+    margin: 0px 0 0 220px!important;
+}
+.navbar-brand img {
+    width: 280px;
+}
+.jumbotron {
+    margin-top: -20px;
+    background-image: url('image 1.jpg');
+    background-size: cover;
+    height: 450px;
+    padding-top: 100px;
+}
+.jumbotron h2 {
+    color: rgb(239, 239, 239);
+    font-family: f2;
+    font-size: 33px;
+}
+.blue-line {
+    border: 1px solid #2ad7e6;
+    width: 40px;
+    margin-bottom: 19px;
+    margin-top: 14px;
+}
+.jumbotron p {
+    color: rgb(239, 239, 239);
+    width: 65%;
+    font-family: f2;
+    font-size: 15px;
+    margin-bottom: 45px;
+    opacity: 0.8;
+}
+.navbar-right {
+    margin: 10px 180px 0 0;
 }
 
 .form-input-field {
@@ -20,5 +75,69 @@ body {
     background: rgba(0,0,0,0);
     border: 2px solid #2ad7e6;
     color: #2ad7e6;
+    width: 160px;
+    height: 55px;
+    padding-top: 13px;
+    border-radius: 2px;
 }
+.btn-order:hover {
+    border: 2px solid #71dde6;
+    color: #71dde6;
+    cursor: pointer;
+    background: rgba(0,0,0,0);
+}
+
+.div-uslugi h3{
+    font-family: f2;
+    opacity: 0.9;
+    margin-bottom: 2px;
+}
+.div-uslugi p {
+    opacity: 0.4;
+    font-family: f1;
+    font-size: 13px;
+    margin-top: 0px;
+}
+.gray-line{
+    border: 1px solid #c9c9cc;
+    width: 40px;
+    margin-bottom: 19px;
+    margin-top: 14px;
+}
+
+.content .thumbnail {
+    border: 1px solid rgba(255, 255, 255, 0);
+}
+.content .thumbnail img {
+    margin-bottom: 15px;
+}
+.content .thumbnail center b {
+    margin-top: 15px;
+    font-family: f1;
+    color: black;
+    opacity: 0.6;
+}
+.content .thumbnail center p {
+    margin-top: 10px;
+    font-family: f2;
+    color: black;
+    opacity: 0.4;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
