@@ -257,7 +257,7 @@ body {
     .navbar-brand {
         position: absolute;
         left: 50%;
-        margin-left: -140px!important;
+        margin-left: -160px!important;
     }
 
 }
@@ -266,9 +266,11 @@ body {
         display: grid;
         text-align: center;
         list-style: none;
+        padding: 0;
     }
     .navbar-nav-grid ul { 
         list-style: none;
+        padding: 0;
     }
     .navbar-nav-grid li {
         margin-top: 10px;   
@@ -343,6 +345,12 @@ body {
         margin: 26px auto;
         display: block;
     }
+    .echology-logo {
+        width: 90%;
+    }
+    .form {
+        padding-left: 0;
+    }
 }
 @media(max-width: 1259px) {
     .footer {
@@ -411,13 +419,17 @@ body {
         width: 320px;
     }
     .footer-phone {
-        width: 320px;
+        width: 292px;
     }
+    .footer .col-md-4 .footer-phone p {
+        width: 250px;
+    }
+
 }
 @media(max-width: 862px) {
     .footer {
-        height: 325px;
-        background: #382f2f;
+        height: 356px;
+        background: #6360a6;
     }
     .footer .col-md-3 {
         display: block;
@@ -426,17 +438,28 @@ body {
     .footer .col-md-4 {
         display: block;
         margin: 18px auto;
-        width: 318px;
+        width: 371px;
     }
     .footer-addr {
-        width: 283px;
+        width: 325px;
     }
     .footer-phone {
-        
+
     }
 } 
 
-
+@media(max-width: 420px) {
+    .footer .col-md-4 {
+        width: 300px;
+        margin-left: -22px;
+    }
+    .footer .col-md-3 {
+        width: 286px;
+    }
+    .footer-addr {
+        width: 316px;
+    }
+}
 
 
 

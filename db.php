@@ -1,4 +1,5 @@
 <?php
+
 $hostname='localhost';
 $username='root';
 $password='';
@@ -10,15 +11,11 @@ try {
     echo 'Connected to Database<br/>';
 
     $sql = "SELECT * FROM stickercollections";
-foreach ($dbh->query($sql) as $row)
-    {
-    echo $row["collection_brand"] ." - ". $row["collection_year"] ."<br/>";
+    foreach ($dbh->query($sql) as $row) {
+        echo $row["collection_brand"] ." - ". $row["collection_year"] ."<br/>";
     }
-
 
     $dbh = null;
-    }
-catch(PDOException $e)
-    {
+} catch (PDOException $e) {
     echo $e->getMessage();
-    }
+}
