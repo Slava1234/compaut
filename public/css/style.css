@@ -143,11 +143,23 @@ body {
 .form {
     padding-left: 20px;
 }
+.form-error {
+    color: #e32d2d;
+    font-style: italic;
+    margin-bottom: 15px;
+    display: none;
+}
+.form-success {
+    color: #0ea525;
+    font-style: italic;
+    margin-bottom: 15px;
+    display: none;
+}
 .form p{
     font-family: f2;
     font-size: 24px;
     opacity: 0.9;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 .form input {
     border-radius: 1px;
@@ -402,9 +414,26 @@ body {
     .footer-info  { 
         margin-left: -24px;
     }
-
 } 
 
+@media(max-width: 440px) {
+    .jumbotron {
+        background-position-x: -150px;
+    }
+
+}
+@media(max-width: 400px) {
+    .jumbotron {
+        background-position-x: -250px;
+    }
+
+}
+
+@media(max-width: 403px)  {
+    .footer .footer-info p:last-child {
+        font-size: 13px;
+    }
+}
 
 
 

@@ -34,67 +34,67 @@ $(function () {
         });
     }
 
-    // ‰Îˇ ÏÓ·ËÎ¸Ì˚ı 1
+    // √§√´√ø √¨√Æ√°√®√´√º√≠√ª√µ 1
     if (windowWidth < 595) {
-        // Œ Õ¿—
+        // √é √ç√Ä√ë
         scrollWindowDown(".nav-a-about-us", 280);
-        // ”—À”√»
+        // √ì√ë√ã√ì√É√à
         scrollWindowDown(".nav-a-service", 880);
-        //  À»≈Õ“€ 
+        // √ä√ã√à√Ö√ç√í√õ 
         scrollWindowDown(".nav-a-clients", 2600);
-        // »  ŒÕ“¿ “€
+        // √à √ä√é√ç√í√Ä√ä√í√õ
         scrollWindowDown(".nav-a-contacts", 2100);
     }
 
-    // ‰Îˇ ÏÓ·ËÎ¸Ì˚ı 2
+    // √§√´√ø √¨√Æ√°√®√´√º√≠√ª√µ 2
     if (windowWidth >= 595 && windowWidth < 770) {
-        // Œ Õ¿—
+        // √é √ç√Ä√ë
         scrollWindowDown(".nav-a-about-us", 280);
-        // ”—À”√»
+        // √ì√ë√ã√ì√É√à
         scrollWindowDown(".nav-a-service", 730);
-        //  À»≈Õ“€ 
+        // √ä√ã√à√Ö√ç√í√õ 
         scrollWindowDown(".nav-a-clients", 2350);
-        //  ŒÕ“¿ “€
+        // √ä√é√ç√í√Ä√ä√í√õ
         scrollWindowDown(".nav-a-contacts", 1850);
     }
 
-    // ‰Îˇ ÔÎ‡Ì¯ÂÚÓ‚ 1
+    // √§√´√ø √Ø√´√†√≠√∏√•√≤√Æ√¢ 1
     if (windowWidth >= 770 && windowWidth < 992) {
-        // Œ Õ¿—
+        // √é √ç√Ä√ë
         scrollWindowDown(".nav-a-about-us", 130);
-        // ”—À”√»
+        // √ì√ë√ã√ì√É√à
         scrollWindowDown(".nav-a-service", 600);
-        //  À»≈Õ“€
+        // √ä√ã√à√Ö√ç√í√õ
         scrollWindowDown(".nav-a-clients", 2050);
-        //  ŒÕ“¿ “€
+        // √ä√é√ç√í√Ä√ä√í√õ
         scrollWindowDown(".nav-a-contacts", 1650);
     }
 
-    // ‰Îˇ ÔÎ‡Ì¯ÂÚÓ‚ 2
+    // √§√´√ø √Ø√´√†√≠√∏√•√≤√Æ√¢ 2
     if (windowWidth >= 992 && windowWidth < 1130) {
-        // Œ Õ¿—
+        // √é √ç√Ä√ë
         scrollWindowDown(".nav-a-about-us", 130);
-        // ”—À”√»
+        // √ì√ë√ã√ì√É√à
         scrollWindowDown(".nav-a-service", 600);
-        //  À»≈Õ“€
+        // √ä√ã√à√Ö√ç√í√õ
         scrollWindowDown(".nav-a-clients", 1380);
-        //  ŒÕ“¿ “€
+        // √ä√é√ç√í√Ä√ä√í√õ
         scrollWindowDown(".nav-a-contacts", 1380);
     }
 
-    // ‰Îˇ ‰ÂÒÍÚÓÔ
+    // √§√´√ø √§√•√±√™√≤√Æ√Ø
     if (windowWidth >= 1130) {
-        // Œ Õ¿—
+        // √é √ç√Ä√ë
         scrollWindowDown(".nav-a-about-us", 80);
-        // ”—À”√»
+        // √ì√ë√ã√ì√É√à
         scrollWindowDown(".nav-a-service", 530);
-        //  À»≈Õ“€
+        // √ä√ã√à√Ö√ç√í√õ
         scrollWindowDown(".nav-a-clients", 1250);
-        //  ŒÕ“¿ “€
+        // √ä√é√ç√í√Ä√ä√í√õ
         scrollWindowDown(".nav-a-contacts", 1250);
     }
 
-    // ŒÚÔ‡‚Í‡ ÙÓÏ˚ Á‡Í‡Á‡
+    // √é√≤√Ø√∞√†√¢√™√† √¥√Æ√∞√¨√ª √ß√†√™√†√ß√†
     $(".form-btn-submit").click(function () {
         var name = $(".form #name").val();
         var email = $(".form #email").val();
@@ -104,12 +104,58 @@ $(function () {
 		  type: "POST",
 		  url: "./email.php",
 		  data: {
-			  
+			  "name": name,
+              "email": email,
+              "subject": subject,
+              "message": message
 		  },
 		  cache: false,
 		  success: function(data){
-			  alert(data);
-			 //$("#resultarea").text(data);
+              if(data == 4) {
+                $(".form p").css("margin-bottom", 5+"px");
+                $(".form-error").css("display", "block");
+                $(".form-success").css("display", "none");
+                $(".form-error").text("–ü–æ–∂–∞–ª—É–π—Å—Ç–∞ —É–∫–∞–∂–∏—Ç–µ –í–∞—à –∏–º—è");
+              }
+              if(data == 5) {
+                $(".form p").css("margin-bottom", 5+"px");
+                $(".form-error").css("display", "block");
+                $(".form-success").css("display", "none");
+                $(".form-error").text("–ü–æ–∂–∞–ª—É–π—Å—Ç–∞ —É–∫–∞–∂–∏—Ç–µ —Ç–µ–º—É –∑–∞–∫–∞–∑–∞");
+              }
+              if(data == 6) {
+                $(".form p").css("margin-bottom", 5+"px");
+                $(".form-error").css("display", "block");
+                $(".form-success").css("display", "none");
+                $(".form-error").text("–ü–æ–∂–∞–ª—É–π—Å—Ç–∞ —É–∫–∞–∂–∏—Ç–µ –í–∞—à e-mail");
+              }
+			  if(data == 1) {
+                $(".form p").css("margin-bottom", 5+"px");
+                $(".form-error").css("display", "none");
+                $(".form-success").css("display", "block");
+                $(".form-success").text("–í–∞—à –∑–∞–∫–∞–∑ —É—Å–ø–µ—à–Ω–æ –æ—Ç–ø—Ä–∞–≤–ª–µ–Ω!");
+                $(".form #name").val("");
+                $(".form #email").val("");
+                $(".form #subject").val("");
+                $(".form #message").val("");
+                setTimeout(function(){
+                    $(".form-success").text("");
+                    $(".form-success").css("display", "none");
+                    $(".form p").css("margin-bottom", 30+"px");
+                }, 4000);
+              }
+              if(data == 2) {
+                $(".form p").css("margin-bottom", 5+"px");
+                $(".form-error").css("display", "block");
+                $(".form-success").css("display", "none");
+                $(".form-error").text("–û—à–∏–±–∫–∞! –∑–∞–∫–∞–∑ –Ω–µ –æ—Ç–ø—Ä–∞–≤–ª–µ–Ω...");
+              }
+              if(data == 3) {
+                $(".form p").css("margin-bottom", 5+"px");
+                $(".form-error").css("display", "block");
+                $(".form-success").css("display", "none");
+                $(".form-error").text("–ù–µ–∫–æ—Ä—Ä–µ–∫—Ç–Ω—ã–π e-mail –∞–¥—Ä–µ—Å");
+              }
 		  }
 		});
     });
